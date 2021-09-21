@@ -1,0 +1,81 @@
+/* ------ Global ----- */
+
+:root {
+  --primaryColor: #5b8a72;
+  --secondaryColor: #56776c;
+  --lightColor: #bfcba8;
+  --darkColor: #464f41;
+  --montserrat: "Montserrat", sans-serif;
+  --palanquin: "Palanquin", sans-serif;
+  --palanquinDark: "Palanquin Dark", sans-serif;
+  --reenie: "Reenie Beanie", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--primaryColor);
+  font-family: var(--palanquinDark);
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+body {
+  background: var(--darkColor);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+.wrapper {
+  width: 80vw;
+  margin: auto;
+}
+
+/* ------ Navbar ----- */
+
+nav {
+  display: flex;
+  height: 4rem;
+  background: white;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin: auto 0;
+}
+
+nav a {
+  color: var(--lightColor);
+  font-family: var(--montserrat);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: var(--lightColor);
+  font-size: 3rem;
+  font-family: var(--reenie);
+  margin: auto 0;
+}
