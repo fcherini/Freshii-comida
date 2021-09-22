@@ -5,40 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freshii</title>
-    <!------ Google Fonts ------>
+    <!------ Fonts ------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Palanquin&family=Palanquin+Dark&family=Reenie+Beanie&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <!------ CSS ------>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <nav>
-      <h6>Freshii</h6>
-      <div class="links">
-        <a href="#home">home</a>
-        <a href="#como">como funciona</a>
-        <a href="#beneficios">benefícios</a>
-        <a href="#planos">planos</a>
-      </div>
-    </nav>
     <div class="container">
+      <nav>
+        <div class="nav__header">
+          <h6 class="nav__title">Freshii</h6>
+          <button class="nav__toggler"><i class="bx bx-menu"></i></button>
+        </div>
+        <div class="nav__links">
+          <a href="#home">home</a>
+          <a href="#como">como funciona</a>
+          <a href="#beneficios">benefícios</a>
+          <a href="#planos">planos</a>
+        </div>
+      </nav>
       <section id="home">
-        <div class="wrapper">
-          <h1>Ser saudável nunca foi tão fácil.</h1>
+        <div class="circle"></div>
+        <div class="section__wrapper">
+          <h1 class="section__title">Ser saudável nunca foi tão fácil.</h1>
+          <div class="cards__container">
+            <!-- Card 1 -->
+            <div class="cards">
+              <div class="cards__title">pronto em até 15 min</div>
+              <div class="cards__icon">
+                <img src="./assets/clock.png" alt="" />
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="cards">
+              <div class="cards__title">refeições saudáveis</div>
+              <div class="cards__icon">
+                <img src="./assets/salad.png" alt="" />
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="cards">
+              <div class="cards__title">alimentos orgânicos</div>
+              <div class="cards__icon">
+                <img src="./assets/organic.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="btn">ver planos</button>
         </div>
       </section>
       <section id="como">
-        <h1>Torne-se um chefe de primeira.</h1>
+        <div class="section__wrapper">
+          <h1 class="section__title">Torne-se um chefe de primeira.</h1>
+        </div>
       </section>
       <section id="beneficios">
-        <h1>Um mundo de benefícios.</h1>
+        <div class="section__wrapper">
+          <h1 class="section__title">Um mundo de benefícios.</h1>
+        </div>
       </section>
       <section id="planos">
-        <h1>Conheça nossos planos.</h1>
+        <div class="section__wrapper">
+          <h1 class="section__title">Conheça nossos planos.</h1>
+        </div>
       </section>
     </div>
     <!------ JQuery ------>
