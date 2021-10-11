@@ -90,6 +90,7 @@ section {
 }
 .btn:hover {
   box-shadow: 1px 4px 20px rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 800px) {
@@ -449,6 +450,12 @@ td {
 }
 
 .cards__planos:hover {
+  box-shadow: 1px 4px 20px rgba(148, 179, 150, 0.5);
+  border: 1px var(--darkColor) solid;
+  cursor: pointer;
+}
+
+.cards__planos--click {
   box-shadow: 1px 4px 20px rgba(148, 179, 150, 0.5);
   border: 1px var(--darkColor) solid;
   cursor: pointer;
