@@ -18,16 +18,19 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
 body {
   background: var(--secondaryColor);
   overflow-x: hidden;
+  font-family: var(--montserrat);
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -53,7 +56,6 @@ section {
 
 .section__wrapper {
   position: relative;
-  width: 95vw;
   min-height: 100vw;
   margin: auto;
   z-index: 10;
@@ -69,7 +71,6 @@ section {
   font-size: 2rem;
   letter-spacing: 0.2rem;
   margin: 3rem auto;
-  line-height: 2.5rem;
   text-align: center;
 }
 
@@ -95,7 +96,7 @@ section {
   .section__title {
     font-size: 3rem;
     letter-spacing: 0.5rem;
-    margin: 5rem auto;
+    margin: 4rem auto;
   }
 
   .section__wrapper {
@@ -110,7 +111,7 @@ nav {
   width: 100vw;
   background: white;
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   transition: var(--transition);
   padding: 1rem;
   top: 0;
@@ -152,6 +153,11 @@ nav {
   font-family: var(--montserrat);
   font-size: 0.8rem;
   text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.nav__links a:hover {
+  color: var(--darkColor);
 }
 
 .nav__links--show {
@@ -183,7 +189,24 @@ nav {
   background: white;
   z-index: -1;
   top: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.plate1 {
+  position: absolute;
+  width: 300px;
+  bottom: 5%;
+  left: -2%;
+  display: none;
+}
+
+.plate2 {
+  position: absolute;
+  width: 230px;
+  top: 35%;
+  right: -2%;
+  transform: scaleX(-1);
+  display: none;
 }
 
 .cards__container {
@@ -201,7 +224,7 @@ nav {
 
 .cards {
   border-radius: 12px;
-  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,6 +234,11 @@ nav {
   padding: 1rem;
   margin: 1rem auto;
   padding: 2rem;
+  transition: var(--transition);
+}
+
+.cards:hover {
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .cards__title {
@@ -227,18 +255,22 @@ nav {
 }
 
 @media screen and (min-width: 800px) {
+  .plate1,
+  .plate2 {
+    display: block;
+  }
   .cards__container {
     width: 60vw;
     margin: auto;
     flex-direction: row;
-    gap: 1rem;
   }
   .cards {
     width: 12rem;
-    height: 14rem;
+    height: 17rem;
+    padding: 3rem 3rem;
   }
   .cards__title {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .cards__icon img {
@@ -266,5 +298,174 @@ nav {
   }
   .btn {
     margin: 1rem auto;
+  }
+}
+
+/* ------ Como ----- */
+.steps__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.steps__container::-webkit-scrollbar {
+  display: none;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.steps__img {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.steps__title {
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0 0 0.6rem;
+  font-size: 1.45rem;
+}
+
+.steps__subtitle {
+  color: var(--darkColor);
+  text-align: center;
+  font-family: var(--palanquin);
+  padding: 0 2rem;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  .steps__container {
+    flex-direction: row;
+  }
+  .steps__img {
+    max-width: 400px;
+  }
+  .steps__title {
+    font-size: 1rem;
+  }
+  .steps__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* ------ Beneficios ----- */
+.beneficios__container {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.beneficios__img {
+  width: 90vw;
+}
+
+.beneficios__list {
+  padding: 2rem 0;
+  text-align: left;
+}
+
+td {
+  padding-bottom: 2rem;
+}
+
+.beneficios__icon {
+  width: 30px;
+  margin-right: 1.5rem;
+}
+
+.beneficions__icon--align {
+  vertical-align: top;
+}
+
+.beneficios__title {
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  font-family: var(--montserrat);
+  font-size: 1.45rem;
+}
+
+.beneficios__description {
+  color: var(--darkColor);
+  font-family: var(--palanquin);
+  font-size: 1.45rem;
+}
+
+@media screen and (min-width: 800px) {
+  .beneficios__container {
+    flex-direction: row;
+  }
+  .beneficios__img {
+    width: 40%;
+  }
+  .beneficios__list {
+    width: 50%;
+  }
+  .beneficios__icon {
+    width: 30px;
+    margin-right: 2rem;
+  }
+  .beneficios__description {
+    font-size: 1.25rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/* ------ Planos ----- */
+.plate3 {
+  position: absolute;
+  width: 250px;
+  top: 12%;
+  left: -2%;
+  display: none;
+}
+
+.cards__container--planos {
+  max-width: 95vw;
+  display: flex;
+  padding: 0 3rem;
+  flex-direction: column;
+  margin: auto;
+  gap: 2rem;
+}
+
+.cards {
+  width: 150px;
+}
+
+.cards__price {
+  color: var(--lightColor);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.cards__planos:hover {
+  box-shadow: 1px 4px 20px rgba(148, 179, 150, 0.5);
+  border: 1px var(--darkColor) solid;
+  cursor: pointer;
+}
+
+.cards__details {
+  color: var(--darkColor);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+  .plate3 {
+    display: block;
+  }
+  .cards__container--planos {
+    flex-direction: row;
   }
 }

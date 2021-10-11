@@ -16,7 +16,6 @@
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
       rel="stylesheet"
     />
-
     <!------ CSS ------>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -24,7 +23,7 @@
     <div class="container">
       <nav>
         <div class="nav__header">
-          <h6 class="nav__title">Freshii</h6>
+          <h6 class="nav__title"><a href="#home">Freshii</a></h6>
           <button class="nav__toggler"><i class="bx bx-menu"></i></button>
         </div>
         <div class="nav__links">
@@ -37,46 +36,167 @@
       <section id="home">
         <div class="circle"></div>
         <div class="section__wrapper">
+          <img class="plate1" src="./assets/plate1.png" alt="" />
+          <img class="plate2" src="./assets/plate2.png" alt="" />
           <h1 class="section__title">Ser saudável nunca foi tão fácil.</h1>
           <div class="cards__container">
             <!-- Card 1 -->
             <div class="cards">
-              <div class="cards__title">pronto em até 15 min</div>
+              <p class="cards__title">pronto em até 15 min</p>
               <div class="cards__icon">
                 <img src="./assets/clock.png" alt="" />
               </div>
             </div>
             <!-- Card 2 -->
             <div class="cards">
-              <div class="cards__title">refeições saudáveis</div>
+              <p class="cards__title">refeições saudáveis</p>
               <div class="cards__icon">
                 <img src="./assets/salad.png" alt="" />
               </div>
             </div>
             <!-- Card 3 -->
             <div class="cards">
-              <div class="cards__title">alimentos orgânicos</div>
+              <p class="cards__title">alimentos orgânicos</p>
               <div class="cards__icon">
                 <img src="./assets/organic.png" alt="" />
               </div>
             </div>
           </div>
-          <button class="btn">ver planos</button>
+          <button type="button" class="btn">
+            <a href="#planos">ver planos</a>
+          </button>
         </div>
       </section>
       <section id="como">
         <div class="section__wrapper">
           <h1 class="section__title">Torne-se um chefe de primeira.</h1>
+          <div class="steps__container">
+            <!-- Step 1 -->
+            <div class="steps">
+              <img src="./assets/choose.png" alt="meal" class="steps__img" />
+              <p class="steps__title">1. escolha uma receita</p>
+              <p class="steps__subtitle">
+                Opções para todos os gostos e dietas
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="steps">
+              <img
+                src="./assets/receive.png"
+                alt="receive"
+                class="steps__img"
+              />
+              <p class="steps__title">2. receba em casa</p>
+              <p class="steps__subtitle">
+                Receba os ingredientes já pré-selecionados
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="steps">
+              <img
+                src="./assets/prepare.png"
+                alt="prepare"
+                class="steps__img"
+              />
+              <p class="steps__title">3. prepare sua refeição</p>
+              <p class="steps__subtitle">Rápido e fácil de preparar</p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="beneficios">
         <div class="section__wrapper">
           <h1 class="section__title">Um mundo de benefícios.</h1>
+          <div class="beneficios__container">
+            <img
+              src="./assets/dish img.png"
+              alt="dish image"
+              class="beneficios__img"
+            />
+            <table class="beneficios__list">
+              <tr class="beneficios__item">
+                <td class="beneficions__icon--align">
+                  <img
+                    src="./assets/check.png"
+                    alt=""
+                    class="beneficios__icon"
+                  />
+                </td>
+                <td>
+                  <span class="beneficios__title">poupe dinheiro</span>
+                  <p class="beneficios__description">
+                    mais barato que ir ao restaurante, nossas refeições te
+                    ajudam a economizar dinheiro
+                  </p>
+                </td>
+              </tr>
+              <tr class="beneficios__item">
+                <td class="beneficions__icon--align">
+                  <img
+                    src="./assets/check.png"
+                    alt=""
+                    class="beneficios__icon"
+                  />
+                </td>
+                <td>
+                  <span class="beneficios__title">menos desperdício</span>
+                  <p class="beneficios__description">
+                    com nossos ingredientes pré-selecionados, você não
+                    desperdiça nada
+                  </p>
+                </td>
+              </tr>
+              <tr class="beneficios__item">
+                <td class="beneficions__icon--align">
+                  <img
+                    src="./assets/check.png"
+                    alt=""
+                    class="beneficios__icon"
+                  />
+                </td>
+                <td>
+                  <span class="beneficios__title">pule semanas</span>
+                  <p class="beneficios__description">
+                    vai viajar ou simplesmente quer dar uma pause? sem problemas
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </section>
       <section id="planos">
         <div class="section__wrapper">
+          <img class="plate3" src="./assets/plate3.png" alt="" />
+
           <h1 class="section__title">Conheça nossos planos.</h1>
+          <div class="cards__container--planos">
+            <!-- Cards 1 -->
+            <div class="cards cards__planos">
+              <p class="cards__title">2 RECEITAS / SEMANA</p>
+              <p class="cards__price">39,99</p>
+              <p class="cards__details">total 4 refeições</p>
+            </div>
+            <!-- Cards 2 -->
+            <div class="cards cards__planos">
+              <p class="cards__title">3 RECEITAS / SEMANA</p>
+              <p class="cards__price">49,99</p>
+              <p class="cards__details">total 6 refeições</p>
+            </div>
+            <!-- Cards 3 -->
+            <div class="cards cards__planos">
+              <p class="cards__title">5 RECEITAS / SEMANA</p>
+              <p class="cards__price">59,99</p>
+              <p class="cards__details">total 10 refeições</p>
+            </div>
+            <!-- Cards 4 -->
+            <div class="cards cards__planos">
+              <p class="cards__title">7 RECEITAS / SEMANA</p>
+              <p class="cards__price">69,99</p>
+              <p class="cards__details">total 14 refeições</p>
+            </div>
+          </div>
+          <button type="button" class="btn">confirmar</button>
         </div>
       </section>
     </div>
